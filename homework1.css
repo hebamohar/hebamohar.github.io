@@ -1,8 +1,8 @@
 /*
 Author: Heba Mohar
-Superstar Clinic Styling
+File: Homework1.css
+Purpose: Style sheet for Superstar Clinic 
 */
-
 
 body {
   background-color: #ffc0cb; /* light pink */
@@ -11,13 +11,14 @@ body {
   margin: 0;
 }
 
-/* ===== HEADER ===== */
+
 #header {
-  background-color: #ffb6c1; /* slightly darker pink */
+  background-color: #ffb6c1; 
   padding: 25px;
   border-bottom: 3px solid black;
   text-align: center;
 }
+
 
 .header-content {
   display: flex;
@@ -26,21 +27,24 @@ body {
   gap: 20px;
 }
 
+
 .logo {
   width: 120px;
   height: auto;
 }
+
 
 h1 {
   font-family: Georgia, serif;
   margin: 0;
 }
 
-/* ===== MAIN CONTENT ===== */
+
 #main {
   text-align: center;
   margin-top: 30px;
 }
+
 
 .form-container {
   background-color: white;
@@ -53,11 +57,12 @@ h1 {
   color: black;
 }
 
-/* ===== TABLE FORM ===== */
+
 table {
   width: 100%;
   border-collapse: collapse;
 }
+
 
 td {
   padding: 10px;
@@ -65,7 +70,7 @@ td {
   text-align: left;
 }
 
-/* ===== FORM ELEMENTS ===== */
+
 input,
 textarea {
   padding: 6px;
@@ -75,7 +80,8 @@ textarea {
   box-sizing: border-box;
 }
 
-/* IMPORTANT: select styled separately so it stays a dropdown */
+
+
 select {
   padding: 6px;
   border-radius: 4px;
@@ -83,11 +89,12 @@ select {
   width: auto;
 }
 
+
 textarea {
   resize: vertical;
 }
 
-/* ===== FOOTER ===== */
+
 #footer {
   background-color: #ffb6c1;
   text-align: center;
@@ -97,7 +104,7 @@ textarea {
   color: black;
 }
 
-/* ===== BUTTONS ===== */
+
 button,
 input[type="submit"],
 input[type="reset"] {
