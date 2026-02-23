@@ -135,3 +135,8 @@ input[type="reset"]:hover {
   border-top: 3px solid black;
   color: black;
 }
+input[type="submit"],
+input[type="reset"] {
+  width: auto;
+  padding: 10px 25px; 
+}
