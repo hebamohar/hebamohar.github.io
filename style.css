@@ -1,11 +1,10 @@
 /*
 Author: Heba Mohar
-File: Homework1.css
-Purpose: Style sheet for Superstar Clinic
 File: style.css
 Purpose: MIS 3371 homework 1 style sheet for Superstar Clinic
+*/
 
-* {
+{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
