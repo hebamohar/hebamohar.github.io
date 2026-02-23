@@ -4,9 +4,7 @@ File: style.css
 Purpose: MIS 3371 homework 1 style sheet for Superstar Clinic
 */
 
-/* ============================= */
-/* GLOBAL RESET */
-/* ============================= */
+/* Fix missing selector */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,22 +16,20 @@ html, body {
 }
 
 body {
-  background: linear-gradient(to bottom, #ffc0cb, #ffe4ec);
+  background-color: #ffc0cb;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: black;
 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* ============================= */
-/* HEADER */
-/* ============================= */
+/* Header */
 #header {
   background-color: #ffb6c1;
-  padding: 30px;
-  border-bottom: 4px solid black;
+  padding: 25px;
+  border-bottom: 3px solid black;
   text-align: center;
 }
 
@@ -41,7 +37,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
 }
 
 .logo {
@@ -51,90 +47,60 @@ body {
 
 h1 {
   font-family: Georgia, serif;
-  font-size: 32px;
-  letter-spacing: 1px;
 }
 
-/* ============================= */
-/* MAIN SECTION */
-/* ============================= */
+/* MAIN FIX IS HERE */
 #main {
   flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;   /* stack title above form */
+  justify-content: flex-start; /* move content to top */
+  align-items: center;      /* center horizontally */
   padding: 40px 20px;
 }
 
-/* ============================= */
-/* FORM CONTAINER */
-/* ============================= */
+/* Style the form title */
+#main h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+/* Form box */
 .form-container {
   background-color: white;
   width: 95%;
   max-width: 1100px;
-  padding: 50px;
-  border-radius: 15px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Title */
-.form-container h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-family: Georgia, serif;
-  font-size: 30px;
-  color: #c71585;
-  border-bottom: 3px solid #ff69b4;
-  display: inline-block;
-  padding-bottom: 8px;
-}
-
-/* ============================= */
-/* TABLE FORMATTING */
-/* ============================= */
+/* Table formatting */
 table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 15px;  /* vertical spacing between rows */
+  border-collapse: collapse;
 }
 
 td {
-  padding: 8px 10px;
+  padding: 12px 10px;
   vertical-align: middle;
-  font-size: 15px;
+  text-align: left;
 }
 
-/* Make left labels bold */
-td:nth-child(odd) {
-  font-weight: 600;
-}
-
-/* ============================= */
-/* INPUTS */
-/* ============================= */
+/* Inputs */
 input,
 textarea,
 select {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #999;
   width: 100%;
   font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-/* Input focus effect */
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #ff69b4;
-  outline: none;
-  box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
 }
 
 textarea {
   resize: vertical;
-  min-height: 90px;
+  min-height: 80px;
 }
 
 input[type="radio"],
@@ -143,39 +109,36 @@ input[type="checkbox"] {
   margin-right: 6px;
 }
 
-/* ============================= */
-/* BUTTONS */
-/* ============================= */
+/* Buttons */
+button,
 input[type="submit"],
-input[type="reset"],
-button {
+input[type="reset"] {
   background-color: #ff69b4;
-  color: white;
+  color: black;
   border: none;
-  padding: 12px 22px;
-  margin: 10px 8px;
-  border-radius: 8px;
+  padding: 10px 18px;
+  margin: 8px 5px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
+button:hover,
 input[type="submit"]:hover,
-input[type="reset"]:hover,
-button:hover {
-  background-color: #c71585;
-  transform: translateY(-2px);
+input[type="reset"]:hover {
+  background-color: #ff1493;
 }
 
-/* ============================= */
-/* FOOTER */
-/* ============================= */
+.button-row {
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Footer */
 #footer {
   background-color: #ffb6c1;
   text-align: center;
-  padding: 30px;
-  border-top: 4px solid black;
+  padding: 25px;
+  border-top: 3px solid black;
   color: black;
-  font-size: 14px;
 }
