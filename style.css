@@ -4,7 +4,7 @@ File: style.css
 Purpose: MIS 3371 homework 1 style sheet for Superstar Clinic
 */
 
-{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
