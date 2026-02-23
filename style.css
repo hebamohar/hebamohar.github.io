@@ -4,6 +4,7 @@ File: style.css
 Purpose: MIS 3371 homework 1 style sheet for Superstar Clinic
 */
 
+/* Fix missing selector */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,6 +25,7 @@ body {
   min-height: 100vh;
 }
 
+/* Header */
 #header {
   background-color: #ffb6c1;
   padding: 25px;
@@ -47,14 +49,23 @@ h1 {
   font-family: Georgia, serif;
 }
 
+/* MAIN FIX IS HERE */
 #main {
-  flex: 1; 
+  flex: 1;
   display: flex;
-  justify-content: center;   
-  align-items: center;       
+  flex-direction: column;      /* stack title above form */
+  justify-content: flex-start; /* push content to top */
+  align-items: center;         /* center horizontally */
   padding: 40px 20px;
 }
 
+/* Title spacing */
+#main h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Form box */
 .form-container {
   background-color: white;
   width: 95%;
@@ -64,6 +75,7 @@ h1 {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* Table formatting */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -75,13 +87,14 @@ td {
   text-align: left;
 }
 
+/* Inputs */
 input,
 textarea,
 select {
   padding: 8px;
   border-radius: 5px;
   border: 1px solid #999;
-  width: 100%;               
+  width: 100%;
   font-size: 14px;
 }
 
@@ -96,6 +109,7 @@ input[type="checkbox"] {
   margin-right: 6px;
 }
 
+/* Buttons */
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -120,6 +134,7 @@ input[type="reset"]:hover {
   padding-top: 20px;
 }
 
+/* Footer */
 #footer {
   background-color: #ffb6c1;
   text-align: center;
