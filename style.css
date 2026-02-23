@@ -3,6 +3,7 @@ Author: Heba Mohar
 Superstar Clinic Styling
 */
 
+
 body {
   background-color: #ffc0cb; /* light pink */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -10,6 +11,7 @@ body {
   margin: 0;
 }
 
+/* ===== HEADER ===== */
 #header {
   background-color: #ffb6c1; /* slightly darker pink */
   padding: 25px;
@@ -34,6 +36,7 @@ h1 {
   margin: 0;
 }
 
+/* ===== MAIN CONTENT ===== */
 #main {
   text-align: center;
   margin-top: 30px;
@@ -50,6 +53,7 @@ h1 {
   color: black;
 }
 
+/* ===== TABLE FORM ===== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -61,8 +65,8 @@ td {
   text-align: left;
 }
 
+/* ===== FORM ELEMENTS ===== */
 input,
-select,
 textarea {
   padding: 6px;
   border-radius: 4px;
@@ -71,10 +75,19 @@ textarea {
   box-sizing: border-box;
 }
 
+/* IMPORTANT: select styled separately so it stays a dropdown */
+select {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #999;
+  width: auto;
+}
+
 textarea {
   resize: vertical;
 }
 
+/* ===== FOOTER ===== */
 #footer {
   background-color: #ffb6c1;
   text-align: center;
@@ -84,6 +97,7 @@ textarea {
   color: black;
 }
 
+/* ===== BUTTONS ===== */
 button,
 input[type="submit"],
 input[type="reset"] {
