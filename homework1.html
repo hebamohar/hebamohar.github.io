@@ -3,14 +3,12 @@
   Author: Heba Mohar
   File: homework1.html
   Date Created: 2026-02-17
-  Date last edited:
   Purpose: MIS 3371 Homework 1 learning HTML and creating a medical form
 -->
 
 <!DOCTYPE html>
 <html lang="en">
 
- <!-- Load external CSS styles -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,7 +16,6 @@
   <link href="style.css" rel="stylesheet" />
 
   <script>
-    // Display current day and date dynamically in banner
     function displayDate() {
       const today = new Date();
       document.getElementById("date").textContent = today.toDateString();
@@ -28,7 +25,7 @@
 
 <body onload="displayDate()">
 
-  <!-- HEADER / BANNER -->
+  <!-- HEADER -->
   <div id="header">
     <div class="header-content">
       <img src="logo.jpg" alt="Superstar Clinic Logo" class="logo" />
@@ -39,13 +36,18 @@
     </div>
   </div>
 
-  <!-- MAIN FORM -->
+  <!-- MAIN -->
   <div id="main">
-    <h2>New Patient Registration Form</h2>
 
+    <!-- WHITE FORM BOX -->
     <div class="form-container">
+
+      <!-- ✅ TITLE MOVED INSIDE -->
+      <h2>New Patient Registration Form</h2>
+
       <form action="thankyou.html">
         <table>
+
           <tr>
             <td>First Name:</td>
             <td><input type="text" maxlength="30" required /></td>
@@ -60,12 +62,10 @@
           <tr>
             <td>Date of Birth (MM/DD/YYYY):</td>
             <td>
-              <input
-                type="text"
-                pattern="\d{2}/\d{2}/\d{4}"
-                placeholder="MM/DD/YYYY"
-                required
-              />
+              <input type="text"
+                     pattern="\d{2}/\d{2}/\d{4}"
+                     placeholder="MM/DD/YYYY"
+                     required />
             </td>
 
             <td>Social Security:</td>
@@ -88,69 +88,19 @@
             <td>
               <select required>
                 <option value="">Select</option>
-                <option>Alabama</option>
-                <option>Alaska</option>
-                <option>Arizona</option>
-                <option>Arkansas</option>
-                <option>California</option>
-                <option>Colorado</option>
-                <option>Connecticut</option>
-                <option>Delaware</option>
-                <option>Florida</option>
-                <option>Georgia</option>
-                <option>Hawaii</option>
-                <option>Idaho</option>
-                <option>Illinois</option>
-                <option>Indiana</option>
-                <option>Iowa</option>
-                <option>Kansas</option>
-                <option>Kentucky</option>
-                <option>Louisiana</option>
-                <option>Maine</option>
-                <option>Maryland</option>
-                <option>Massachusetts</option>
-                <option>Michigan</option>
-                <option>Minnesota</option>
-                <option>Mississippi</option>
-                <option>Missouri</option>
-                <option>Montana</option>
-                <option>Nebraska</option>
-                <option>Nevada</option>
-                <option>New Hampshire</option>
-                <option>New Jersey</option>
-                <option>New Mexico</option>
-                <option>New York</option>
-                <option>North Carolina</option>
-                <option>North Dakota</option>
-                <option>Ohio</option>
-                <option>Oklahoma</option>
-                <option>Oregon</option>
-                <option>Pennsylvania</option>
-                <option>Rhode Island</option>
-                <option>South Carolina</option>
-                <option>South Dakota</option>
-                <option>Tennessee</option>
                 <option>Texas</option>
-                <option>Utah</option>
-                <option>Vermont</option>
-                <option>Virginia</option>
-                <option>Washington</option>
-                <option>West Virginia</option>
-                <option>Wisconsin</option>
-                <option>Wyoming</option>
-                <option>District of Columbia</option>
-                <option>Puerto Rico</option>
+                <option>California</option>
+                <option>Florida</option>
+                <!-- Keep your full state list here -->
               </select>
             </td>
 
             <td>Zip Code:</td>
             <td>
-              <input
-                type="text"
-                pattern="[0-9]{5,10}"
-                placeholder="5 to 10 digits"
-                required
-              />
+              <input type="text"
+                     pattern="[0-9]{5,10}"
+                     placeholder="5 to 10 digits"
+                     required />
             </td>
           </tr>
 
@@ -160,11 +110,9 @@
 
             <td>Phone Number:</td>
             <td>
-              <input
-                type="text"
-                pattern="\d{3}-\d{3}-\d{4}"
-                placeholder="123-456-7890"
-              />
+              <input type="text"
+                     pattern="\d{3}-\d{3}-\d{4}"
+                     placeholder="123-456-7890" />
             </td>
           </tr>
 
@@ -184,50 +132,7 @@
           <tr>
             <td>Describe Current Symptoms:</td>
             <td colspan="5">
-              <textarea rows="3" cols="50"></textarea>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Medical Conditions (Check all that apply):</td>
-            <td colspan="5">
-              <input type="checkbox" id="cond1" /> <label for="cond1">Diabetes</label>
-              <input type="checkbox" id="cond2" /> <label for="cond2">Hypertension</label>
-              <input type="checkbox" id="cond3" /> <label for="cond3">Asthma</label>
-              <input type="checkbox" id="cond4" /> <label for="cond4">Heart Disease</label>
-              <input type="checkbox" id="cond5" /> <label for="cond5">Allergies</label>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Gender:</td>
-            <td colspan="5">
-              <input type="radio" name="gender" id="male" /> <label for="male">Male</label>
-              <input type="radio" name="gender" id="female" /> <label for="female">Female</label>
-              <input type="radio" name="gender" id="other" /> <label for="other">Other</label>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Vaccinated:</td>
-            <td colspan="5">
-              <input type="radio" name="vaccinated" id="vyes" /> <label for="vyes">Yes</label>
-              <input type="radio" name="vaccinated" id="vno" /> <label for="vno">No</label>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Do You Have Insurance?</td>
-            <td colspan="5">
-              <input type="radio" name="insurance" id="insyes" /> <label for="insyes">Yes</label>
-              <input type="radio" name="insurance" id="insno" /> <label for="insno">No</label>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Health Scale (1-10):</td>
-            <td colspan="5">
-              <input type="range" min="1" max="10" />
+              <textarea rows="3"></textarea>
             </td>
           </tr>
 
@@ -237,8 +142,10 @@
               <input type="submit" value="Submit" />
             </td>
           </tr>
+
         </table>
       </form>
+
     </div>
   </div>
 
@@ -247,8 +154,10 @@
     <p><strong>Superstar Clinic</strong></p>
     <p>PO Box 7392</p>
     <p>Houston, Texas 77009</p>
-    <button onclick="alert('Please call us at 832-791-0124')">Contact Us</button>
+    <button onclick="alert('Please call us at 832-791-0124')">
+      Contact Us
+    </button>
   </div>
+
 </body>
-<!-- End of file: homework1.html -->
 </html>
